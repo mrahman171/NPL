@@ -30,14 +30,14 @@
                         <h4 class="text-center">Registration</h4>
                     </div>
                     <div class="card-body">
-                        <form id="registrationForm">
+                        <form id="registrationForm" method="post" action="DB/register.php">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="username" required>
+                                <input type="text" class="form-control" id="username" name="username" required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" pattern=".+@nuvistapharma\.net$"
+                                <input type="email" class="form-control" id="email" name="email" pattern=".+@nuvistapharma\.net$"
                                     required placeholder="@nuvistapharma.net">
                                 <div id="emailError" class="invalid-feedback">Please use an email with the domain
                                     "@nuvistapharma.net"</div>
@@ -45,7 +45,7 @@
 
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" required>
+                                <input type="password" class="form-control" id="password" name="password" required>
                                 <div id="passwordStrength" class="mt-2"></div>
                             </div>
                             <div class="mb-3">
